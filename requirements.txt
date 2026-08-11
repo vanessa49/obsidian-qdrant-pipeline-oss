@@ -1,0 +1,10 @@
+markitdown
+pymupdf4llm
+qdrant-client
+watchdog
+pyyaml
+requests
+marker-pdf
+python-pptx
+Pillow
+pymupdf

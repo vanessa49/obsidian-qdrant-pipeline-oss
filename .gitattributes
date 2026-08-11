@@ -1,0 +1,8 @@
+# Keep private release-operational notes and legacy internal packaging docs out of
+# the clean public source snapshot produced with `git archive`.
+docs/PUBLIC_RELEASE_LOCAL_CODEX_HANDOFF.md export-ignore
+docs/PUBLIC_RELEASE_NOTES_DRAFT.md export-ignore
+app_desktop/BUILD_GUIDE.md export-ignore
+app_desktop/DEPLOYMENT.md export-ignore
+app_desktop/QUICKREF.md export-ignore
+app_desktop/SUMMARY.md export-ignore

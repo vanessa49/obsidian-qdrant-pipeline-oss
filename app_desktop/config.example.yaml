@@ -1,0 +1,37 @@
+# Public desktop configuration template.
+# Copy to config_local.yaml for local use; that file is gitignored.
+# Do not commit real API keys, private endpoints, or private knowledge-base paths.
+
+qdrant:
+  primary:
+    mode: "local"
+    path: "./qdrant_data"
+  fallback:
+    mode: "remote"
+    url: "http://localhost:6333"
+  collection_name: "personal_kb"
+
+embedding:
+  ollama:
+    url: "http://localhost:11434"
+    model: "bge-m3"
+    timeout: 30
+
+llm:
+  nvidia:
+    # NVIDIA_API_KEY from the process environment takes precedence.
+    # Keep this blank; config_local.yaml is only a controlled-development fallback.
+    api_key: ""
+    base_url: "https://integrate.api.nvidia.com/v1"
+    models:
+      - "qwen/qwen3.5-122b-a10b"
+      - "deepseek-ai/deepseek-v4-pro"
+      - "meta/llama-3.3-70b-instruct"
+    timeout: 60
+    temperature: 0.3
+    max_tokens: 1024
+
+retrieval:
+  top_k: 10
+  score_threshold: 0.5
+  max_context_length: 4000

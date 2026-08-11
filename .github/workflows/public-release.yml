@@ -1,0 +1,26 @@
+name: public-release
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  public-release-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check tracked-tree release boundary
+        run: python scripts/public_release_guard.py
+
+      - name: Compile Python sources
+        run: python -m compileall -q .

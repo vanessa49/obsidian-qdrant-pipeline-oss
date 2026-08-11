@@ -1,0 +1,90 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+config.yaml
+config.local.yaml
+app_desktop/config_local.yaml
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Qdrant and private knowledge-base data
+qdrant_data/
+app_desktop/qdrant_data/
+*.qdrant
+app_desktop/bundled_kb/
+app_desktop/bundled_ollama/
+
+# Desktop build outputs
+app_desktop/build/
+app_desktop/dist/
+app_desktop/*.spec
+
+# Test/input documents and generated artifacts
+test_*.pdf
+test_*.docx
+test_*.pptx
+*.tmp
+*.log
+migrate_errors.log
+.cache/
+*.cache
+~/.cache/marker/
+
+# Personal knowledge sources: never commit real vault/inbox content
+vault/
+kb-inbox/
+inbox/
+
+# Local helper/status files
+ask.py
+SETUP_COMPLETE.md
+QUICKSTART.md
+FEATURES_SUMMARY.md
+COMPRESS_FEATURE.md
+
+# Reference projects (uncomment if local ref/ contains third-party/private material)
+# ref/

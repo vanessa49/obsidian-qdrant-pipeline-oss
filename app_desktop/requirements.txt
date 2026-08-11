@@ -1,0 +1,10 @@
+# 桌面应用依赖
+# 用于开发和打包
+
+gradio>=4.0.0
+pyyaml>=6.0
+requests>=2.31.0
+qdrant-client>=1.7.0
+
+# 打包工具
+pyinstaller>=6.0.0

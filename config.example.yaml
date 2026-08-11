@@ -1,0 +1,60 @@
+# Public example configuration.
+# Copy this file to config.yaml for local use. config.yaml is gitignored.
+# Never commit API keys or private knowledge-base paths.
+
+vault_path: "<PATH_TO_YOUR_VAULT>"
+inbox_path: "<PATH_TO_YOUR_INBOX>"
+
+qdrant:
+  # Use localhost by default. Replace only in your untracked config.yaml.
+  url: "http://localhost:6333"
+  collection_name: "personal_kb"
+
+ollama:
+  url: "http://localhost:11434"
+  embedding_model: "bge-m3"
+  llm_model: "qwen2.5:7b"
+
+# LLM configuration. NVIDIA_API_KEY from the environment takes precedence.
+# The api_key field is intentionally blank in the public example.
+llm:
+  provider: "nvidia"
+  nvidia:
+    api_key: ""
+    base_url: "https://integrate.api.nvidia.com/v1"
+    models:
+      - "qwen/qwen3.5-122b-a10b"
+      - "deepseek-ai/deepseek-v4-pro"
+      - "meta/llama-3.3-70b-instruct"
+    timeout: 60
+    temperature: 0.3
+    max_tokens: 1024
+
+vision_api:
+  url: "https://text.pollinations.ai/"
+  models:
+    - "openai"
+    - "gemini"
+    - "openai-large"
+    - "llama-vision"
+
+type_folders:
+  paper: "10-papers"
+  report: "20-my-reports"
+  article: "30-articles"
+  reference: "40-reference"
+  default: "00-inbox"
+
+chunking:
+  max_chunk_size: 800
+  overlap: 0
+
+supported_formats:
+  - ".pdf"
+  - ".pptx"
+  - ".docx"
+  - ".html"
+  - ".htm"
+  - ".md"
+  - ".txt"
+  - ".tex"
