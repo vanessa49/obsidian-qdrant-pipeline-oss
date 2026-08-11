@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security and private-data concerns
+    url: https://github.com/vanessa49/obsidian-qdrant-pipeline-oss/security/policy
+    about: Please review the security policy before reporting credential exposure, private-data leakage, or unsafe packaged knowledge-base contents.
