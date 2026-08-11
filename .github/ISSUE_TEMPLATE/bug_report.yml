@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a reproducible problem in the public source tree
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Use synthetic or redistributable examples only. Do not attach private documents, vault contents, credentials, Qdrant snapshots, or machine-local configuration.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem and the user-visible impact.
+      placeholder: A concise description of the failure.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Provide the smallest reproducible steps using synthetic data.
+      placeholder: |
+        1. Configure ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What should have happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include only non-sensitive environment details relevant to reproduction.
+      placeholder: |
+        OS:
+        Python:
+        Qdrant:
+        Ollama / provider path:
+        Relevant package versions:
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs or traceback
+      description: Remove tokens, private paths, document text, endpoints, and personal data before pasting logs.
+      render: shell
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I confirmed this report contains no credentials, private source documents, real vault content, private Qdrant data, or other sensitive runtime data.
+          required: true
