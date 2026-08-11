@@ -1,0 +1,40 @@
+name: Feature request
+description: Propose an improvement to the ingestion, retrieval, or contributor workflow
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe a concrete user problem. Use synthetic examples and keep private runtime data out of the issue.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What user workflow is difficult or currently unsupported?
+      placeholder: Describe the concrete workflow and why the current behavior is insufficient.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the smallest useful change you would like to see.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional workarounds, existing tools, or tradeoffs worth considering.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Suggested validation
+      description: If possible, describe a synthetic fixture or test that would demonstrate the feature works.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I will not provide private documents, real vault content, credentials, Qdrant snapshots, or machine-local configuration as examples or fixtures.
+          required: true
